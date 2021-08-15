@@ -22,6 +22,10 @@ Created On: 07/04/2021 3:41
     }
 
     @media print {
+        .no-print {
+            display: none;
+        }
+
         body * {
             visibility: hidden;
         }
@@ -73,7 +77,7 @@ Created On: 07/04/2021 3:41
                 <th>التليفون</th>
                 <th>العنوان</th>
                 <th>تاريخ التسجيل</th>
-                <th>العملية</th>
+                <th class="no-print">العملية</th>
             </tr>
             </thead>
             <tbody>
@@ -89,7 +93,7 @@ Created On: 07/04/2021 3:41
                         <fmt:parseDate value="${ item.date }" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime"
                                        type="both"/>
                         <fmt:formatDate pattern="dd-MM-yyyy HH:mm a" value="${parsedDateTime}"/></td>
-                    <td>
+                    <td class="no-print">
                         <div class="btn-group">
                             <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">عمليات
