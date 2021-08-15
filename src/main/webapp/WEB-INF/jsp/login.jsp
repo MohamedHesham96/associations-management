@@ -49,7 +49,8 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <span class="login100-form-title p-b-48">
-                    <img style="width: 200px" src="${pageContext.servletContext.contextPath}/images/Sawa_team_@2000.png">
+                    <img style="width: 200px"
+                         src="${pageContext.servletContext.contextPath}/images/Sawa_team_@2000.png">
 					</span>
             <div class="mb-3">
                <span style="color: #db1f1f; font-size: 13px; margin-bottom: 2px;">
@@ -69,17 +70,14 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-                    <input class="input100" type="password" name="password">
+                    <input id="password" class="input100" type="password" name="password">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn bg-success">
                             Login
                         </button>
                     </div>

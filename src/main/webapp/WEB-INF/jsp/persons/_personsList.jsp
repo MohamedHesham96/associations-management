@@ -66,7 +66,7 @@ Created On: 07/04/2021 3:41
 </div>
 
 <div id="printThis">
-    <div class="table-responsive">
+    <div class="table-responsive show">
         <table id="personsTable" class="table table-sm table-hover table-center mb-0">
             <thead>
             <tr>
