@@ -32,6 +32,7 @@ public class Person {
     private String ssn;
 
     @OneToMany(mappedBy = "person")
+    @OrderBy("date desc")
     private List<Help> helpList;
 
     @Column(name = "DATE")

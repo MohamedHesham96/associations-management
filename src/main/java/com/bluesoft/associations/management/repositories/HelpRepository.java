@@ -16,6 +16,6 @@ public interface HelpRepository extends JpaRepository<Help, Integer> {
 
     @Query("select h from Help h where (:name is null or h.person.name like concat('%',:name,'%'))" +
             " and (:ssn is null or h.person.ssn like concat('%',:ssn,'%'))" +
-            " and (:helpType is null or h.helpType like concat('%',:helpType,'%'))")
+            " and (:helpType is null or h.helpType like concat('%',:helpType,'%')) order by h.date desc")
     Page<Help> search(String name, String ssn, String helpType, Pageable pageable);
 }
