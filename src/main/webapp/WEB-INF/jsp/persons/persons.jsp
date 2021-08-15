@@ -30,7 +30,6 @@ Created On: 07/04/2021 11:00
     </div>
 </div>
 <script src="<c:url value="/js/commons.js"/>"></script>
-<script src="<c:url value="/js/printOperation.js"/>"></script>
 <script src="<c:url value="/templates/plugins/parsley/parsley.js"/>"></script>
 <script src="<c:url value="/js/persons.js"/>"></script>
 <script src="<c:url value="/js/helps.js"/>"></script>

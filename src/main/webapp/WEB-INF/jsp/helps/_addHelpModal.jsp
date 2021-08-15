@@ -59,8 +59,8 @@ Created On: 07/04/2021 3:40
 
                 </form>
 
-                <div class="row">
-                    <button id="helpSaveButton" onclick="createHelp();" class="btn btn-success col-2 m-1">حفظ
+                <div class="">
+                    <button id="helpSaveButton" onclick="createHelp();" class="btn btn-success col-2">حفظ
                     </button>
                     <button type="button" class="btn btn-secondary col-2 m-1" data-dismiss="modal">إلغاء</button>
                 </div>

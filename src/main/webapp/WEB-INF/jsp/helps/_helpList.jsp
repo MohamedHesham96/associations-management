@@ -69,7 +69,7 @@ Created On: 07/04/2021 3:41
 
 <div id="printThis">
     <div class="table-responsive shadow">
-        <table id="helpsTable" class="table table-sm table-hover table-center mb-0">
+        <table id="helpsTable" class="table table-hover table-center mb-0">
             <thead>
             <tr>
                 <th>م</th>
@@ -121,21 +121,21 @@ Created On: 07/04/2021 3:41
             </tbody>
         </table>
     </div>
-    <label>${total} / ${total == 0 ? page : page + 1} </label>
+    <label class="mt-2">${total} / ${total == 0 ? page : page + 1} </label>
 </div>
 
-<nav aria-label="Page navigation" class="offset-md-5 col-md-2  mt-2">
+<nav aria-label="Page navigation" class="offset-md-5 col-md-2">
     <ul class="pagination">
 
         <li class="page-item ${page + 1 == total || total == 0 ? 'disabled' : ''}">
             <button onclick="nextPage('/app/helps/search','searchHelpsResultDiv','searchHelpFormId');"
-                    class="page-link  ${page + 1 == total || total == 0 ? '' : 'text-warning'}"
+                    class="page-link  ${page + 1 == total || total == 0 ? '' : 'text-success border-success'}"
             >التالي
             </button>
         </li>
         <li class="page-item  ${page == 0 ? 'disabled' : ''}">
             <button onclick="previousPage('/app/helps/search','searchHelpsResultDiv','searchHelpFormId')"
-                    class="page-link ${page == 0 ? '' : 'text-warning'}"
+                    class="page-link ${page == 0 ? '' : 'text-success border-success'}"
             >السابق
             </button>
         </li>
