@@ -39,6 +39,19 @@ Created On: 07/04/2021 3:40
                                class="form-control required">
                     </div>
 
+                    <div class="form-group row text-center">
+                        <label for="served" class="col-md-6">استلم المساعدة<input type="radio" value="true"
+                                                                                  data-parsley-mincheck="1"
+                                                                                  id="served" name="served"
+                                                                                  class="form-control">
+                        </label>
+
+                        <label for="notServed" class="col-md-6">لم يستلم المساعدة<input type="radio" value="false"
+                                                                                        id="notServed" name="served"
+                                                                                        class="form-control">
+                        </label>
+                    </div>
+
                 </form>
 
                 <div class="row">

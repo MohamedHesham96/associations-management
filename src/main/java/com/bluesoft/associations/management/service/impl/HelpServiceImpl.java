@@ -31,12 +31,15 @@ public class HelpServiceImpl implements HelpService {
             Help help = new Help();
             help.setPerson(new Person(helpDTO.getPersonId()));
             help.setHelpType(helpDTO.getHelpType());
+            help.setHelpType(helpDTO.getHelpType());
+            help.setServed(helpDTO.isServed());
             help.setDate(LocalDateTime.now());
             return helpRepository.save(help);
         } else {
             Help oldHelp = helpRepository.findById(helpDTO.getId()).get();
             oldHelp.setPerson(new Person(helpDTO.getPersonId()));
             oldHelp.setHelpType(helpDTO.getHelpType());
+            oldHelp.setServed(helpDTO.isServed());
             return helpRepository.save(oldHelp);
         }
     }
