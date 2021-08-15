@@ -23,7 +23,8 @@ Created On: 07/04/2021 3:40
 
                     <div class="form-group">
                         <label>الاسم</label>
-                        <select class="form-control" id="personId" name="personId">
+                        <select class="form-control" id="personId" name="personId"
+                                data-parsley-required="true">
                             <option>-- اختار اسم الشخص --</option>
                             <c:forEach items="${personList}" var="person">
                                 <option value="${person.id}">${person.name}</option>
@@ -40,16 +41,20 @@ Created On: 07/04/2021 3:40
                     </div>
 
                     <div class="form-group row text-center">
-                        <label for="served" class="col-md-6">استلم المساعدة<input type="radio" value="true"
-                                                                                  data-parsley-mincheck="1"
-                                                                                  id="served" name="served"
-                                                                                  class="form-control">
-                        </label>
+                        <div class="col-md-6">
+                            <label for="served">استلم المساعدة<input type="radio" value="true"
+                                                                     id="served" name="served"
+                                                                     data-parsley-required="true"
+                                                                     class="form-control"></label>
 
-                        <label for="notServed" class="col-md-6">لم يستلم المساعدة<input type="radio" value="false"
-                                                                                        id="notServed" name="served"
-                                                                                        class="form-control">
-                        </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="notServed">لم يستلم المساعدة<input type="radio" value="false"
+                                                                           data-parsley-required="true"
+                                                                           id="notServed" name="served"
+                                                                           class="form-control">
+                            </label>
+                        </div>
                     </div>
 
                 </form>
