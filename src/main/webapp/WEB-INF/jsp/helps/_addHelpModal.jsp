@@ -23,9 +23,7 @@ Created On: 07/04/2021 3:40
 
                     <div class="form-group">
                         <label>الاسم</label>
-                        <select class="form-control" id="personId" name="personId"
-                                data-parsley-required="true">
-                            <option>-- اختار اسم الشخص --</option>
+                        <select class="form-control" id="personId" name="personId" data-parsley-required="true">
                             <c:forEach items="${personList}" var="person">
                                 <option value="${person.id}">${person.name}</option>
                             </c:forEach>
@@ -60,8 +58,7 @@ Created On: 07/04/2021 3:40
                 </form>
 
                 <div class="">
-                    <button id="helpSaveButton" onclick="createHelp();" class="btn btn-success col-2">حفظ
-                    </button>
+                    <button id="helpSaveButton" onclick="createHelp();" class="btn btn-success col-2">حفظ</button>
                     <button type="button" class="btn btn-secondary col-2 m-1" data-dismiss="modal">إلغاء</button>
                 </div>
 

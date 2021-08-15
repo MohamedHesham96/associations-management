@@ -48,7 +48,7 @@ Created On: 07/04/2021 3:41
     <input type="hidden" id="total" value="${total}"/>
     <div class="col-md-12 mb-2 row">
 
-        <label class="mt-2 col-1">العدد: </label>
+        <label class="mt-2 mr-3">العدد: </label>
 
         <select id="size" class="form-control col-1"
                 onchange="changeTableSize('/app/helps/search','searchHelpsResultDiv','searchHelpFormId')">
@@ -163,7 +163,7 @@ Created On: 07/04/2021 3:41
 
         table.on('order.dt search.dt', function () {
             table.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
-                cell.innerHTML = ${page * size + 1} +zi;
+                cell.innerHTML = ${page * size + 1} + i;
             });
         }).draw();
     });

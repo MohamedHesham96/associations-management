@@ -6,7 +6,7 @@ Created On: 08/04/2021 10:49
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
-<div class="row mb-4 shadow pb-4">
+<div class="row mb-4 shadow pb-4 pt-3">
 
     <form class="form-row col-12" id="searchHelpFormId">
 
