@@ -1,0 +1,24 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="teamTemplate" template="/WEB-INF/jsp/template/main.jsp">
+        <put-attribute name="head" value="/WEB-INF/jsp/template/common/head.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/template/common/header.jsp"/>
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/template/common/sidebar.jsp"/>
+        <put-attribute name="body" value=""/>
+        <!--<put-attribute name="sideMenu" value="/WEB-INF/jsp/admin/common/sideMenu.jsp" />-->
+    </definition>
+
+    <definition name="persons" extends="teamTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/persons/persons.jsp"/>
+    </definition>
+
+    <definition name="helps" extends="teamTemplate">
+        <put-attribute name="body" value="/WEB-INF/jsp/helps/helps.jsp"/>
+    </definition>
+
+    <!--VacationManagement-->
+
+</tiles-definitions>
