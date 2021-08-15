@@ -28,7 +28,7 @@ Created On: 08/04/2021 10:49
         <div class="col-2">
             <label> </label>
             <button onclick="searchInTable('/app/helps/search', 'searchHelpsResultDiv', 'searchHelpFormId');"
-                    class="btn btn-warning text-black  form-control mt-2">بحث
+                    class="btn btn-success text-white font-weight-bold form-control mt-2">بحث
             </button>
         </div>
 

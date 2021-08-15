@@ -1,8 +1,6 @@
 package com.bluesoft.associations.management.service.impl;
 
-import com.bluesoft.associations.management.DTOS.SearchHelpDTO;
 import com.bluesoft.associations.management.DTOS.SearchPersonDTO;
-import com.bluesoft.associations.management.entities.Help;
 import com.bluesoft.associations.management.entities.Person;
 import com.bluesoft.associations.management.repositories.PersonRepository;
 import com.bluesoft.associations.management.service.PersonService;
@@ -12,7 +10,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

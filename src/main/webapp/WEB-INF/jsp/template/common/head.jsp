@@ -32,6 +32,7 @@
 
 
 <link rel="stylesheet" href="<c:url value="/templates/plugins/toastr/toastr.min.css"/>">
+<link href="<c:url value="/css/font-awesome.css" />" rel="stylesheet">
 
 <!--[if lt IE 9]>
 <script src="<c:url value="/templates/js/html5shiv.min.js"/>"></script>

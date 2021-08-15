@@ -16,7 +16,16 @@ Created On: 07/04/2021 3:41
         }
     }
 
+    @page {
+        margin: 0 auto;
+    }
+
     @media print {
+
+        .no-print {
+            display: none;
+        }
+
         body * {
             visibility: hidden;
         }
@@ -34,10 +43,10 @@ Created On: 07/04/2021 3:41
 
 </style>
 
-<div class="row 2">
+<div class="row">
     <input type="hidden" id="current" value="${page}"/>
     <input type="hidden" id="total" value="${total}"/>
-    <div class="col-9 mb-2 row">
+    <div class="col-md-12 mb-2 row">
 
         <label class="mt-2 col-1">العدد: </label>
 
@@ -48,7 +57,13 @@ Created On: 07/04/2021 3:41
             <option ${size eq 50 ? 'selected':''} value="50">50</option>
             <option ${size eq 100 ? 'selected':''} value="100">100</option>
         </select>
+
+        <button class="btn btn-primary ml-3 col-md-2 font-weight-bold"
+                onclick="printElement('printThis')">طباعة
+        </button>
+
     </div>
+
 
 </div>
 
@@ -66,7 +81,7 @@ Created On: 07/04/2021 3:41
                 <th>العنوان</th>
                 <th>التاريخ</th>
                 <th>الإستلام</th>
-                <th>العمليات</th>
+                <th class="no-print">العمليات</th>
             </tr>
             </thead>
             <tbody>
@@ -88,9 +103,9 @@ Created On: 07/04/2021 3:41
                     <td>
                         <strong style="color: ${item.served == true ? "#00CC00" : "#FF0000"}">${item.served == true ? " استلم" : "لم يستلم"}</strong>
                     </td>
-                    <td>
+                    <td class="no-print">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">عمليات
                             </button>
                             <div class="dropdown-menu">
@@ -106,9 +121,8 @@ Created On: 07/04/2021 3:41
             </tbody>
         </table>
     </div>
+    <label>${total} / ${total == 0 ? page : page + 1} </label>
 </div>
-
-<label>${total} / ${total == 0 ? page : page + 1} </label>
 
 <nav aria-label="Page navigation" class="offset-md-5 col-md-2  mt-2">
     <ul class="pagination">
@@ -127,7 +141,6 @@ Created On: 07/04/2021 3:41
         </li>
     </ul>
 </nav>
-
 
 <script>
     $(document).ready(function () {
@@ -150,7 +163,7 @@ Created On: 07/04/2021 3:41
 
         table.on('order.dt search.dt', function () {
             table.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
-                cell.innerHTML = i + 1;
+                cell.innerHTML = ${page * size + 1} +zi;
             });
         }).draw();
     });

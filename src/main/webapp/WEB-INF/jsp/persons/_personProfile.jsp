@@ -63,7 +63,7 @@ Created On: 07/04/2021 3:40
                         </td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">عمليات
                                 </button>
                                 <div class="dropdown-menu">
