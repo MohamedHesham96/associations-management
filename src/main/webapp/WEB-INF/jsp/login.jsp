@@ -48,9 +48,9 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <span class="login100-form-title p-b-48">
-                    <img style="width: 200px"
-                         src="${pageContext.servletContext.contextPath}/images/Sawa_team_@2000.png">
+            <span class="login100-form-title p-b-15">
+                    <img style="width: 250px"
+                         src="${pageContext.servletContext.contextPath}/images/logo.jpeg">
 					</span>
             <div class="mb-3">
                <span style="color: #db1f1f; font-size: 13px; margin-bottom: 2px;">

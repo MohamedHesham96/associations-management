@@ -14,7 +14,7 @@
     <!-- Logo -->
     <div class="header-left">
         <a href="index.html" class="logo">
-            <img src="${pageContext.servletContext.contextPath}/images/Sawa_team_@2000.png" alt="Logo">
+            <img src="${pageContext.servletContext.contextPath}/images/logo.jpeg" style="width: 50px" alt="Logo">
             <%--<img src="${pageContext.servletContext.contextPath}/templates/img/logo.png" alt="Logo">--%>
         </a>
         <a href="index.html" class="logo logo-small">
