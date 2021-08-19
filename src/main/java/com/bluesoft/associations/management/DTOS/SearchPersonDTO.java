@@ -5,6 +5,7 @@ public class SearchPersonDTO {
     private String name;
     private String ssn;
     private String phone;
+    private String socialStatus;
 
     public String getName() {
         return name;
@@ -28,5 +29,13 @@ public class SearchPersonDTO {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getSocialStatus() {
+        return socialStatus;
+    }
+
+    public void setSocialStatus(String socialStatus) {
+        this.socialStatus = socialStatus;
     }
 }

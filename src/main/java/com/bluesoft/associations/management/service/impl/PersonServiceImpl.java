@@ -61,7 +61,8 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public Page<Person> search(SearchPersonDTO searchPersonDTO, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return personRepository.search(searchPersonDTO.getName(), searchPersonDTO.getSsn(), searchPersonDTO.getPhone(), pageable);
+        return personRepository.search(searchPersonDTO.getName(), searchPersonDTO.getSsn(),
+                searchPersonDTO.getPhone(), searchPersonDTO.getSocialStatus(), pageable);
     }
 
 }

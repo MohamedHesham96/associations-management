@@ -27,6 +27,10 @@ Created On: 07/04/2021 3:41
         }
 
         body * {
+            width: 100%;
+        }
+
+        body * {
             visibility: hidden;
         }
 
@@ -73,10 +77,10 @@ Created On: 07/04/2021 3:41
                 <th>م</th>
                 <th>الاسم</th>
                 <th>الرقم القومي</th>
-                <th>الحالة الاجتماعية</th>
                 <th>التليفون</th>
-                <th>العنوان</th>
-                <th>تاريخ التسجيل</th>
+                <th class="no-print">الحالة الاجتماعية</th>
+                <th class="no-print">العنوان</th>
+                <th class="no-print">>تاريخ التسجيل</th>
                 <th class="no-print">العملية</th>
             </tr>
             </thead>
@@ -86,10 +90,10 @@ Created On: 07/04/2021 3:41
                     <td class="index"></td>
                     <td><a href="javascript:;" onclick="openPersonProfile(${item.id})">${item.name}</a></td>
                     <td>${item.ssn}</td>
-                    <td>${item.socialStatus}</td>
                     <td>${item.phone}</td>
-                    <td>${item.address}</td>
-                    <td>
+                    <td class="no-print">${item.socialStatus}</td>
+                    <td class="no-print">${item.address}</td>
+                    <td class="no-print">
                         <fmt:parseDate value="${ item.date }" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime"
                                        type="both"/>
                         <fmt:formatDate pattern="dd-MM-yyyy HH:mm a" value="${parsedDateTime}"/></td>
@@ -113,7 +117,6 @@ Created On: 07/04/2021 3:41
     </div>
     <label class="mt-2">${total} / ${total == 0 ? page : page + 1} </label>
 </div>
-
 
 <nav aria-label="Page navigation" class="offset-md-5 col-md-2">
     <ul class="pagination">
@@ -152,5 +155,4 @@ Created On: 07/04/2021 3:41
             cell.innerHTML = ${page * size + 1} +i;
         });
     }).draw();
-
 </script>

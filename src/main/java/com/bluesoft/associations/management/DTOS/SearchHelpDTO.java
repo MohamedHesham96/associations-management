@@ -7,6 +7,7 @@ public class SearchHelpDTO {
     private String name;
     private String ssn;
     private String helpType;
+    private String socialStatus;
 
     public String getName() {
         return name;
@@ -30,5 +31,13 @@ public class SearchHelpDTO {
 
     public void setHelpType(String helpType) {
         this.helpType = helpType;
+    }
+
+    public String getSocialStatus() {
+        return socialStatus;
+    }
+
+    public void setSocialStatus(String socialStatus) {
+        this.socialStatus = socialStatus;
     }
 }

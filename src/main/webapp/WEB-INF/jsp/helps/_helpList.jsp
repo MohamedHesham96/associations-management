@@ -163,7 +163,7 @@ Created On: 07/04/2021 3:41
 
         table.on('order.dt search.dt', function () {
             table.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
-                cell.innerHTML = ${page * size + 1} + i;
+                cell.innerHTML = ${page * size + 1} +i;
             });
         }).draw();
     });

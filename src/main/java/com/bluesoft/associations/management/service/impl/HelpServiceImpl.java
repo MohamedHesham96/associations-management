@@ -71,7 +71,7 @@ public class HelpServiceImpl implements HelpService {
         Pageable pageable = PageRequest.of(page, size);
         return helpRepository.search(searchHelpDTO.getName(),
                 searchHelpDTO.getSsn(),
-                searchHelpDTO.getHelpType(), pageable);
+                searchHelpDTO.getHelpType(), searchHelpDTO.getSocialStatus(), pageable);
     }
 
 }

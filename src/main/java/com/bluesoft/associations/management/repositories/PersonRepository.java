@@ -14,6 +14,7 @@ public interface PersonRepository extends JpaRepository<Person, Integer> {
 
     @Query("select p from Person p where (:name is null or p.name like concat('%',:name,'%'))" +
             " and (:ssn is null or p.ssn like concat('%',:ssn,'%'))" +
+            " and (:socialStatus is null or p.socialStatus like concat('%',:socialStatus,'%'))" +
             " and (:phone is null or p.phone like concat('%',:phone,'%'))")
-    Page<Person> search(String name, String ssn, String phone, Pageable pageable);
+    Page<Person> search(String name, String ssn, String phone, String socialStatus, Pageable pageable);
 }
